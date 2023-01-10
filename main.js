@@ -14,7 +14,7 @@ app.on("ready", () => {
     },
   });
 
-  mainWindow.loadFile("./views/index.html");
+  mainWindow.loadFile("./Front/src/views/index.html");
 });
 
 //createApp(App).mount("#app");
