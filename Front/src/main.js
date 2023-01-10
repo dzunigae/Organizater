@@ -7,14 +7,14 @@ let mainWindow;
 
 app.on("ready", () => {
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1080,
+    height: 720,
     webPreferences: {
       nodeIntegration: true,
     },
   });
 
-  mainWindow.loadFile("./App.vue");
+  mainWindow.loadFile("./views/index.html");
 });
 
 //createApp(App).mount("#app");
