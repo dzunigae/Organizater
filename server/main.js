@@ -134,17 +134,19 @@ tables.forEach((table) => {
     });
 });
 
-const_tables.forEach((const_table) => {
-    tab = const_table[0];
-    lis = const_table[1];
-    lis.forEach((i) => {
-        db.run(`INSERT INTO '${tab}' ('${tab}') VALUES ('${i}')`, (err) => {
-            if (err) {
-                console.error(err.message);
-            }else{
-                console.log(`Valor '${i}' añadido a '${tab}' correctamente.`);
-            }
-        });
-      });
-});
-
+//Running insert data into tables function
+function t_creation(c_t){
+    const_tables.forEach((const_table) => {
+        tab = const_table[0];
+        lis = const_table[1];
+        lis.forEach((i) => {
+            db.run(`INSERT INTO '${tab}' ('${tab}') VALUES ('${i}')`, (err) => {
+                if (err) {
+                    console.error(err.message);
+                }else{
+                    console.log(`Valor '${i}' añadido a '${tab}' correctamente.`);
+                }
+            });
+          });
+    });
+}
