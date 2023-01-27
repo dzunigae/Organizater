@@ -135,7 +135,7 @@ tables.forEach((table) => {
 });
 
 //Running insert data into tables function
-function t_creation(c_t){
+function t_creation(){
     const_tables.forEach((const_table) => {
         tab = const_table[0];
         lis = const_table[1];
@@ -149,4 +149,9 @@ function t_creation(c_t){
             });
           });
     });
-}
+};
+
+module.exports = {
+    db,
+    t_creation
+};
